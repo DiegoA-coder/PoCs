@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">PoC</string>
+    <string name="content_url"><![CDATA["http://ice55.securenetsystems.net/DASH36"]]></string>
+    <string name="ad_tag_url"><![CDATA[https://securepubads.g.doubleclick.net/gampad/ads?env=instream&gdfp_req=1&ad_type=audio&output=vast&ad_rule=0&iu=/29782907/Pruebas-Sistemas/Prueba-Audio-Ads&sz=640x480&&correlator=234234234234234]]></string>
+</resources>
