@@ -40,5 +40,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivityForResult(intent, 0);
             }
         });
+
+        Button buttonSpotify = findViewById(R.id.buttonSpotify);
+        buttonSpotify.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent (v.getContext(), SdkSpotify.class);
+                startActivityForResult(intent, 0);
+            }
+        });
     }
 }
