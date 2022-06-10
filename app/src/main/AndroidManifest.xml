@@ -14,9 +14,11 @@
         android:theme="@style/Theme.PoC"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".SdkSpotify"
+            android:name=".YouTubeEmbed"
             android:exported="false" />
-        <!-- Sample Ad Manager app ID: ca-app-pub-3940256099942544~3347511713 -->
+        <activity
+            android:name=".SdkSpotify"
+            android:exported="false" /> <!-- Sample Ad Manager app ID: ca-app-pub-3940256099942544~3347511713 -->
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-6446880076993314~9023290385" />
