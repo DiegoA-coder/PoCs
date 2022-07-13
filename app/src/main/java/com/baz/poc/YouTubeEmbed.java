@@ -3,8 +3,10 @@ package com.baz.poc;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.webkit.WebResourceRequest;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 public class YouTubeEmbed extends AppCompatActivity {
 
@@ -19,15 +21,18 @@ public class YouTubeEmbed extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_you_tube_embed);
 
-        miVisorVideo = (WebView) findViewById(R.id.webView1);
-        final WebSettings ajustesVisorWeb = miVisorVideo.getSettings();
-        ajustesVisorWeb.setJavaScriptEnabled(true);
-        miVisorVideo.loadDataWithBaseURL(null, contentVideo,"text/html", "UTF-8",null);
-
         miVisorListVideo = (WebView) findViewById(R.id.webView2);
         final WebSettings ajustesVisorWeb2 = miVisorListVideo.getSettings();
         ajustesVisorWeb2.setJavaScriptEnabled(true);
-        miVisorListVideo.loadDataWithBaseURL(null, contentListVideo,"text/html", "UTF-8",null);
+        miVisorListVideo.loadUrl("https://music.youtube.com");
+
+        miVisorListVideo.setWebViewClient(new WebViewClient() {
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
+                return super.shouldOverrideUrlLoading(view, request);
+            }
+        } );
+
 
     }
 }
